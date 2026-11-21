@@ -1,0 +1,824 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 8%;
+
+    gap: 60px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hello {
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #777;
+}
+
+.hero h2 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+/* Primary Button */
+
+.primary-btn {
+    background: white;
+
+    color: black;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Secondary Button */
+
+.secondary-btn {
+    border: 1px solid #444;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #151515;
+
+    border-color: white;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.image-container {
+    width: 380px;
+
+    height: 380px;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    border: 1px solid #333;
+
+    position: relative;
+}
+
+.image-container::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -15px;
+
+    border-radius: 50%;
+
+    border: 1px solid #222;
+
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    padding: 12px 24px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section:not(.hero) {
+    padding: 100px 8%;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 15px;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+    .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+}
+
+.about-stats {
+    grid-template-columns: 1fr;
+}
+
+.stat {
+    border-right: none;
+
+    border-bottom: 1px solid #222;
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+.skills-container {
+    grid-template-columns: 1fr;
+}
+
+.learning {
+    grid-column: span 1;
+}
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .image-container {
+        width: 230px;
+        height: 230px;
+    }
+    
+    .social-links {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-top: 50px;
+}
+
+.social-links a {
+    justify-content: space-between;
+}
+
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    position: relative;
+}
+
+
+/* Section Heading */
+
+.section-heading {
+    margin-bottom: 70px;
+}
+
+.section-heading p {
+    color: #777;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    max-width: 800px;
+
+    line-height: 1.1;
+}
+
+.section-heading h2 span {
+    color: #666;
+}
+
+
+/* About Content */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+/* About Text */
+
+.about-text h3,
+.about-focus h3 {
+    font-size: 24px;
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #999;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+
+    max-width: 600px;
+}
+
+
+/* Focus */
+
+.focus-item {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+.focus-item:first-of-type {
+    border-top: 1px solid #222;
+}
+
+.focus-item > span {
+    color: #666;
+
+    font-family: monospace;
+
+    font-size: 14px;
+}
+
+.focus-item h4 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.focus-item p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT STATS
+========================= */
+
+.about-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 80px;
+
+    border-top: 1px solid #222;
+
+    border-bottom: 1px solid #222;
+}
+
+.stat {
+    padding: 40px 20px;
+
+    border-right: 1px solid #222;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat h3 {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.stat p {
+    color: #777;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+    position: relative;
+}
+
+
+/* Skills Container */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Skill Category */
+
+.skill-category {
+    border: 1px solid #222;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.skill-category:hover {
+    border-color: #555;
+
+    transform: translateY(-5px);
+}
+
+
+/* Skill Header */
+
+.skill-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.skill-header span {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 14px;
+}
+
+.skill-header h3 {
+    font-size: 22px;
+}
+
+
+/* Skill List */
+
+.skill-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Individual Skill */
+
+.skill {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-top: 1px solid #1d1d1d;
+}
+
+.skill span {
+    font-size: 16px;
+}
+
+.skill small {
+    color: #666;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* Learning */
+
+.learning {
+    grid-column: span 2;
+}
+
+.learning-text {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.learning-text p {
+    border: 1px solid #333;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    color: #aaa;
+
+    transition: 0.3s;
+}
+
+.learning-text p:hover {
+    color: white;
+
+    border-color: #777;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+
+.contact-content {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+.contact .section-heading {
+    margin-bottom: 30px;
+}
+
+
+.contact .section-heading h2 {
+    margin: auto;
+}
+
+
+.contact-description {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #888;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EMAIL BUTTON
+========================= */
+
+.email-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+    padding: 16px 28px;
+
+    background: white;
+
+    color: black;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.email-button span {
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.email-button:hover {
+    transform: translateY(-4px);
+}
+
+
+.email-button:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 70px;
+}
+
+
+.social-links a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 20px;
+
+    border: 1px solid #222;
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.social-links a span {
+    color: #555;
+
+    transition: 0.3s;
+}
+
+
+.social-links a:hover {
+    color: white;
+
+    border-color: #555;
+
+    transform: translateY(-3px);
+}
+
+
+.social-links a:hover span {
+    color: white;
+
+    transform: translate(3px, -3px);
+}
